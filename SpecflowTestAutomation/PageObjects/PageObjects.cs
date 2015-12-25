@@ -15,14 +15,12 @@ namespace SpecflowTestAutomation.PageObjects1
 
         public void PopulateSearchTextbox(string searchTerm)
         {
-
             SearchTextbox.Clear();
             SearchTextbox.SendKeys(searchTerm);
         }
 
         public void ClickSearchButton()
         {
-
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromMilliseconds(10000));
             wait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(By.ClassName("lsb")));
 
@@ -31,7 +29,6 @@ namespace SpecflowTestAutomation.PageObjects1
 
         public string GetPageTitle()
         {
-
             return driver.Title;
         }
 
